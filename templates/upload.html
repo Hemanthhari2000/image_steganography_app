@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+</head>
+<body>
+    <div class="title container text-center">
+        <h1>Steganography Your Image &#128521;</h1><br>
+    </div>
+    <div class="butts container text-center border border-black p-5">
+        <!-- <a href="#" class="btn btn-primary">upload</a> -->
+        <form action="{{url_for('upload')}}" method="post" enctype="multipart/form-data">
+            <input type="file" name="uploadedImage" id="uploadedImage" >
+            <label for="dataEncode">Data to Encode</label>
+            <input type="text" name="dataEncode" id="dataEncode">
+            <input type="submit" value="upload">
+        </form>
+        <br><br>
+    </div>
+</body>
+</html>

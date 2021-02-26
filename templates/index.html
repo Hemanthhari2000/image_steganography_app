@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Steganography</title>
+</head>
+<body>
+    <br>
+    <div class="title container text-center">
+        <h1>Steganography Your Image &#128521;</h1><br>
+    </div>
+    <div class="butts container text-center border border-black p-5">
+        <a href="{{url_for('upload')}}" class="btn btn-primary">Encode</a>
+        <a href="{{url_for('decode') }}" class="btn btn-primary">Decode</a>
+        <br><br>
+
+        {% if encoded %}
+            <div class="encoded_img">
+                <img src="{{url_for('output_image')}}" alt="encoded image" height="300px" width="300px" style="object-fit: cover;">
+                <br><br><br>
+                <a href="{{ url_for('download_files') }}" class="btn btn-success">Download</a>
+            </div>
+        {% endif %}
+        {% if decoded %}
+            <div class="decoded-img">
+                <h3>Your Decoded Message</h3>
+                <h5>{{ data }}</h5>
+            </div>
+        {% endif %}
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>
