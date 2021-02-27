@@ -14,7 +14,7 @@ and the run the following `python app.py`
 
 #### Home Page
 
-![](resources/home.png)
+![](resources/home.PNG)
 
 #### Upload Page
 
