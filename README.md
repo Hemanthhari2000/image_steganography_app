@@ -14,12 +14,20 @@ and the run the following `python app.py`
 
 #### Home Page
 
-![](static/home.png)
+![](resources/home.png)
 
 #### Upload Page
 
+![](resources/upload.png)
+
 #### Encode Result Page
+
+![](resources/encode_result.png)
 
 #### Decode Page
 
+![](resources/decode.png)
+
 #### Decode Result Page
+
+![](resources/decode_result.png)
