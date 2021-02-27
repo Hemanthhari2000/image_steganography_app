@@ -18,16 +18,16 @@ and the run the following `python app.py`
 
 #### Upload Page
 
-![](resources/upload.png)
+![](resources/upload.PNG)
 
 #### Encode Result Page
 
-![](resources/encode_result.png)
+![](resources/encode_result.PNG)
 
 #### Decode Page
 
-![](resources/decode.png)
+![](resources/decode.PNG)
 
 #### Decode Result Page
 
-![](resources/decode_result.png)
+![](resources/decode_result.PNG)
