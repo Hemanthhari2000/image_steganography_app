@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+<!-- 
     <div class="title container text-center">
-        <h1>Steganography Your Image &#128521;</h1><br>
+        <h1>Upload Your Image 📸</h1><br>
     </div>
     <div class="butts container text-center border border-black p-5">
-        <!-- <a href="#" class="btn btn-primary">upload</a> -->
         <form action="{{url_for('upload')}}" method="post" enctype="multipart/form-data">
             <input type="file" name="uploadedImage" id="uploadedImage" >
             <label for="dataEncode">Data to Encode</label>
@@ -20,5 +13,24 @@
         </form>
         <br><br>
     </div>
-</body>
-</html>
+ -->
+
+{% block content %}
+<br>
+<div class="container text-center">
+    <h1>Upload Your Image 📸</h1>
+    <br>
+</div>
+
+<div class="container d-flex justify-content-center align-items-center border border-secondary rounded-3 p-5">
+    <form action="{{ url_for('upload')}}" method="post" enctype ="multipart/form-data">
+        <input class='form-control' type="file" name="uploadedImage" id="uploadedImage" required>
+        <br><br>
+        <input class = "form-control" placeholder="Encoding Data..." type="text" name="dataEncode" id="dataEncode" required>
+        <br><br>
+        <input class = "btn btn-outline-success" type="submit" value="upload">
+    </form>
+</div>
+
+
+{% endblock %}

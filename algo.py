@@ -27,7 +27,7 @@ def modPix(pix, data):
     for i in range(lendata):
 
         # Extracting 3 pixels at a time
-        pix = [value for value in imdata.__next__()[:3] +
+        pix = [int(value) for value in imdata.__next__()[:3] +
                imdata.__next__()[:3] +
                imdata.__next__()[:3]]
 

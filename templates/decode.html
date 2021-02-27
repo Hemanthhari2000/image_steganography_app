@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decode</title>
-</head>
-<body>
-    <div class="title container text-center">
-        <h1>Decode Your Image &#128521;</h1><br>
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<div class="container text-center">
+        <h1>Decode Your Image 🕵🏻</h1>
+        <br>
     </div>
-    <div class="butts container text-center border border-black p-5">
+    <div class="container d-flex justify-content-center align-items-center border border-secondary rounded-3 p-5">
         <form action="{{url_for('decode')}}" method="post" enctype="multipart/form-data">
-            <input type="file" name="decodeImage" id="decodeImage" >
-            <input type="submit" value="upload">
+            <input class = 'form-control' type="file" name="decodeImage" id="decodeImage" required>
+            <br><br>
+            <input class = 'btn btn-outline-secondary' type="submit" value="upload">
         </form>
         <br><br>
     </div>
-</body>
-</html>
+{% endblock %}

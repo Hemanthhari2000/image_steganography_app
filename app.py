@@ -31,7 +31,9 @@ def upload():
             uploaded_file.save('static/input.png')
             data = str(request.form.get('dataEncode'))
             algo.imgEncode(data)
-        return render_template('index.html', encoded=True)
+            return render_template('index.html', encoded=True)
+        else:
+            print('Fill The Form First!!!')
     return render_template('upload.html')
 
 
